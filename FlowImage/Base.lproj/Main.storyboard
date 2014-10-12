@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AWa-00-ZES" userLabel="FluildPlaceHolder">
+                                <rect key="frame" x="0.0" y="20" width="320" height="320"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="AWa-00-ZES" secondAttribute="height" multiplier="1:1" id="5BT-rs-fVo"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gc4-MS-EUm" userLabel="PenBoardView">
+                                <rect key="frame" x="0.0" y="340" width="320" height="76"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="peJ-By-AwE" customClass="FIKBrashView">
+                                        <rect key="frame" x="0.0" y="0.0" width="76" height="76"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="peJ-By-AwE" secondAttribute="height" multiplier="1:1" id="HtD-oV-zQX"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="brashSizeRatio">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="FQw-17-4Ni">
+                                        <rect key="frame" x="94" y="23" width="208" height="31"/>
+                                        <color key="minimumTrackTintColor" red="1" green="0.52546156480481876" blue="0.00019371711026683336" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="maximumTrackTintColor" white="0.31643476277372262" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="didChangeBrashSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="mLx-iZ-3Km"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="FQw-17-4Ni" secondAttribute="centerY" id="Brt-Y7-krf"/>
+                                    <constraint firstAttribute="trailing" secondItem="FQw-17-4Ni" secondAttribute="trailing" constant="20" id="CVF-YH-DCZ"/>
+                                    <constraint firstItem="peJ-By-AwE" firstAttribute="leading" secondItem="gc4-MS-EUm" secondAttribute="leading" id="Kcg-rX-Vbj"/>
+                                    <constraint firstAttribute="bottom" secondItem="peJ-By-AwE" secondAttribute="bottom" id="Usj-SZ-wAp"/>
+                                    <constraint firstItem="peJ-By-AwE" firstAttribute="top" secondItem="gc4-MS-EUm" secondAttribute="top" id="iaM-hV-zOc"/>
+                                    <constraint firstItem="FQw-17-4Ni" firstAttribute="leading" secondItem="peJ-By-AwE" secondAttribute="trailing" constant="20" id="k8B-MP-epQ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mk0-h6-XFi">
+                                <rect key="frame" x="0.0" y="492" width="320" height="76"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eih-JN-paK" customClass="FIKFacebookButton">
+                                        <rect key="frame" x="76" y="0.0" width="76" height="76"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="eih-JN-paK" secondAttribute="height" multiplier="1:1" id="qfw-6E-4g2"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didSelectedFacebook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Di2-Uc-Yk1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3Y-Hk-nQd" customClass="FIKTwitterButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="76" height="76"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="m3Y-Hk-nQd" secondAttribute="height" multiplier="1:1" id="CTP-5W-Htm"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didSelectedTwitter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aB6-JH-vCm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5v-Fu-8i6" customClass="FIKExportButton">
+                                        <rect key="frame" x="244" y="0.0" width="76" height="76"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="P5v-Fu-8i6" secondAttribute="height" multiplier="1:1" id="LdY-hj-FHi"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didSelectedExport:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v0I-KI-2Bn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="P5v-Fu-8i6" secondAttribute="bottom" id="HTB-02-eRm"/>
+                                    <constraint firstItem="eih-JN-paK" firstAttribute="leading" secondItem="m3Y-Hk-nQd" secondAttribute="trailing" id="InN-S6-zvo"/>
+                                    <constraint firstItem="eih-JN-paK" firstAttribute="top" secondItem="mk0-h6-XFi" secondAttribute="top" id="blG-Fa-VM5"/>
+                                    <constraint firstAttribute="trailing" secondItem="P5v-Fu-8i6" secondAttribute="trailing" id="hgA-j2-KoA"/>
+                                    <constraint firstAttribute="bottom" secondItem="m3Y-Hk-nQd" secondAttribute="bottom" id="kPb-pb-G1d"/>
+                                    <constraint firstAttribute="bottom" secondItem="eih-JN-paK" secondAttribute="bottom" id="lBS-nF-kw8"/>
+                                    <constraint firstItem="m3Y-Hk-nQd" firstAttribute="top" secondItem="mk0-h6-XFi" secondAttribute="top" id="oQ1-FN-4HU"/>
+                                    <constraint firstItem="m3Y-Hk-nQd" firstAttribute="leading" secondItem="mk0-h6-XFi" secondAttribute="leading" id="rIt-iV-ZGT"/>
+                                    <constraint firstItem="P5v-Fu-8i6" firstAttribute="top" secondItem="mk0-h6-XFi" secondAttribute="top" id="rrx-Pf-dEM"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lzi-jF-uuA">
+                                <rect key="frame" x="0.0" y="416" width="320" height="76"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NFP-CX-C3y" userLabel="Separator">
+                                        <rect key="frame" x="76" y="15" width="1" height="46"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1" id="WEv-LW-bYF"/>
+                                        </constraints>
+                                    </view>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="baj-In-MJJ">
+                                        <rect key="frame" x="85" y="0.0" width="235" height="76"/>
+                                        <color key="backgroundColor" white="0.14999999999999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ofw-A0-Gz7">
+                                            <size key="itemSize" width="50" height="50"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                    </collectionView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLZ-or-9Sp" userLabel="ImportButton" customClass="FIKImportButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="76" height="76"/>
+                                        <color key="backgroundColor" white="0.14999999999999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="MLZ-or-9Sp" secondAttribute="height" multiplier="1:1" id="tcL-JY-dum"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didSelectedImport:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mZB-BC-jPn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.14999999999999999" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="NFP-CX-C3y" firstAttribute="top" secondItem="Lzi-jF-uuA" secondAttribute="top" constant="15" id="0gH-Lb-Hey"/>
+                                    <constraint firstAttribute="trailing" secondItem="baj-In-MJJ" secondAttribute="trailing" id="1h4-VS-rqR"/>
+                                    <constraint firstItem="baj-In-MJJ" firstAttribute="leading" secondItem="NFP-CX-C3y" secondAttribute="trailing" constant="8" id="4KX-dI-Gao"/>
+                                    <constraint firstAttribute="bottom" secondItem="NFP-CX-C3y" secondAttribute="bottom" constant="15" id="4lt-qd-KE2"/>
+                                    <constraint firstItem="baj-In-MJJ" firstAttribute="top" secondItem="Lzi-jF-uuA" secondAttribute="top" id="GhK-yB-utf"/>
+                                    <constraint firstAttribute="bottom" secondItem="baj-In-MJJ" secondAttribute="bottom" id="OPS-kI-YrZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="MLZ-or-9Sp" secondAttribute="bottom" id="iy4-c6-Phe"/>
+                                    <constraint firstItem="MLZ-or-9Sp" firstAttribute="leading" secondItem="Lzi-jF-uuA" secondAttribute="leading" id="pyp-gu-Q7m"/>
+                                    <constraint firstItem="NFP-CX-C3y" firstAttribute="leading" secondItem="MLZ-or-9Sp" secondAttribute="trailing" id="tDB-Zk-K6i"/>
+                                    <constraint firstItem="MLZ-or-9Sp" firstAttribute="top" secondItem="Lzi-jF-uuA" secondAttribute="top" id="wEh-jt-3ud"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gc4-MS-EUm" firstAttribute="top" secondItem="AWa-00-ZES" secondAttribute="bottom" id="27L-Kc-Tpc"/>
+                            <constraint firstAttribute="trailing" secondItem="Lzi-jF-uuA" secondAttribute="trailing" id="573-9i-17a"/>
+                            <constraint firstItem="mk0-h6-XFi" firstAttribute="top" secondItem="Lzi-jF-uuA" secondAttribute="bottom" id="7bH-44-FLv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mk0-h6-XFi" secondAttribute="bottom" id="9YG-0K-Qnu"/>
+                            <constraint firstItem="Lzi-jF-uuA" firstAttribute="top" secondItem="gc4-MS-EUm" secondAttribute="bottom" id="Cib-UH-pqM"/>
+                            <constraint firstItem="gc4-MS-EUm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DBU-eL-HAw"/>
+                            <constraint firstAttribute="trailing" secondItem="mk0-h6-XFi" secondAttribute="trailing" id="Ibs-kY-z7S"/>
+                            <constraint firstItem="Lzi-jF-uuA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Q8G-cW-MQE"/>
+                            <constraint firstItem="mk0-h6-XFi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WYa-z1-LGE"/>
+                            <constraint firstAttribute="trailing" secondItem="AWa-00-ZES" secondAttribute="trailing" id="Zdr-Ys-8ZO"/>
+                            <constraint firstAttribute="trailing" secondItem="gc4-MS-EUm" secondAttribute="trailing" id="Zhz-b3-vWE"/>
+                            <constraint firstItem="mk0-h6-XFi" firstAttribute="height" secondItem="Lzi-jF-uuA" secondAttribute="height" id="dtD-mM-SOj"/>
+                            <constraint firstItem="AWa-00-ZES" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="eTb-e6-qH5"/>
+                            <constraint firstAttribute="centerX" secondItem="AWa-00-ZES" secondAttribute="centerX" id="eou-xx-ufx"/>
+                            <constraint firstItem="Lzi-jF-uuA" firstAttribute="height" secondItem="gc4-MS-EUm" secondAttribute="height" id="ezM-oZ-hen"/>
+                            <constraint firstItem="AWa-00-ZES" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="igy-ul-8X7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="_brashSlider" destination="FQw-17-4Ni" id="bnW-Dr-s3v"/>
+                        <outlet property="_brashView" destination="peJ-By-AwE" id="ZQ7-HX-c4F"/>
+                        <outlet property="_imageCollectionView" destination="baj-In-MJJ" id="aDO-CP-RDW"/>
+                        <outlet property="_imageCollectionViewFlowLayout" destination="ofw-A0-Gz7" id="gKE-gn-3Ic"/>
+                        <outlet property="_metalPlaceholderView" destination="AWa-00-ZES" id="Eod-Pk-6AO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-171" y="248"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

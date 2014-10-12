@@ -1,0 +1,21 @@
+/* 他のアプリに送る */
+"text3" = "Send to other apps";
+
+/* カメラで撮る */
+"text7" = "Take a photo";
+
+/* 出力 */
+"text_1" = "Export";
+
+/* 写真として保存 */
+"text_2" = "Save to Photos";
+
+/* キャンセル */
+"text_4" = "Cancel";
+
+/* 入力 */
+"text_5" = "Import";
+
+/* 写真から選ぶ */
+"text_6" = "Choose from photos";
+

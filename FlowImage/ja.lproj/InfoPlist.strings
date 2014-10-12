@@ -1,0 +1,12 @@
+/* 
+  InfoPlist.strings
+  FlowImage
+
+  Created by ushiostarfish on 2014/09/23.
+  Copyright (c) 2014年 Ushio. All rights reserved.
+*/
+
+"CFBundleDisplayName" = "流れる写真";
+"CFBundleName" = "Flow Image";
+"CFBundleShortVersionString" = "";
+"NSHumanReadableCopyright" = "Copyright (C) 2014 吉村 篤 All Rights Reserved.";
